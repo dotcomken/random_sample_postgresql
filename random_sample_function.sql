@@ -29,7 +29,7 @@ ELSE
     RAISE EXCEPTION 'ERROR: Confidence Level Percentage has to be 90,95 or 99.';
 END IF;
                        
-RETURN CEILING(POWER(z,2)*p*q*N/(POWER(E,2)*(N-1)+POWER(z,2)*p*q));
+RETURN CEILING(POWER(z,2) * p * q * N / (POWER(E,2) * (N-1) + POWER(z,2) * p * q));
 
 END;
 $dbvis$ LANGUAGE plpgsql
